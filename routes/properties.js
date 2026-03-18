@@ -869,7 +869,7 @@ router.post('/', auth, async (req, res) => {
     // Generate clone URL if not provided
     let finalCloneUrl = clone_url;
     if (!finalCloneUrl || finalCloneUrl.trim() === '') {
-      finalCloneUrl = 'https://cewealthzen.com/clone';
+      finalCloneUrl = 'https://ceinfotech.in/clone';
     }
 
     // Creating property

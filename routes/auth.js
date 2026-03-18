@@ -1035,7 +1035,7 @@ router.get('/verify-mobile', async (req, res) => {
       
       // Get app scheme from environment
       const appScheme = process.env.APP_SCHEME || 'realestate://';
-      const frontendUrl = process.env.FRONTEND_URL || 'https://cewealthzen.com';
+      const frontendUrl = process.env.FRONTEND_URL || 'https://ceinfotech.in';
       
       // Create mobile verification success page with app redirect
       const mobileSuccessHtml = `
@@ -1350,7 +1350,7 @@ router.get('/verify-mobile', async (req, res) => {
             <h1>Verification Failed</h1>
             <p class="subtitle">The verification link is invalid or has expired.</p>
             <div style="margin-top: 20px;">
-              <a href="${process.env.FRONTEND_URL || 'https://cewealthzen.com'}" class="btn">Go to App</a>
+              <a href="${process.env.FRONTEND_URL || 'https://ceinfotech.in'}" class="btn">Go to App</a>
             </div>
           </div>
         </body>
@@ -1377,7 +1377,7 @@ router.get('/verify-mobile', async (req, res) => {
         <div class="error">
           <h1>❌ Verification Error</h1>
           <p>An error occurred during verification. Please try again or contact support.</p>
-          <a href="${process.env.FRONTEND_URL || 'https://cewealthzen.com'}" 
+          <a href="${process.env.FRONTEND_URL || 'https://ceinfotech.in'}" 
              style="display: inline-block; margin-top: 20px; padding: 10px 20px; background: #007AFF; color: white; text-decoration: none; border-radius: 5px;">
             Go to App
           </a>

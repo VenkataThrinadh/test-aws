@@ -389,10 +389,10 @@ const sendVerificationEmail = async (email, token, userId) => {
     const startTime = Date.now();
     
     // Get the base URL from environment variables - production URL
-    const baseUrl = process.env.FRONTEND_URL || 'https://cewealthzen.com';
+    const baseUrl = process.env.FRONTEND_URL || 'https://ceinfotech.in';
     
     // Get the API URL for verification - use production URL
-    const apiUrl = process.env.API_URL || 'https://cewealthzen.com/backend';
+    const apiUrl = process.env.API_URL || 'https://api.ceinfotech.in';
     
     // Try to use the separated template file, fall back to inline if it fails
     let html;
@@ -679,7 +679,7 @@ const sendCustomerCredentialsEmail = async (email, customerId, customerPassword,
           </div>
           
           <div style="text-align: center; margin: 30px 0;">
-            <a href="https://cewealthzen.com" 
+            <a href="https://ceinfotech.in" 
                style="background-color: #007bff; color: white; padding: 12px 30px; text-decoration: none; border-radius: 5px; font-weight: bold; display: inline-block;">
               🚀 Login to Your Account
             </a>

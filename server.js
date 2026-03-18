@@ -22,7 +22,7 @@ const io = socketIo(server, {
       'http://localhost:3001',
       'http://localhost:3002',
       'http://localhost:3003',
-      'https://cewealthzen.com',
+      'https://ceinfotech.in',
       'https://sales.cewealthzen.com',
       'https://loans.cewealthzen.com',
       'https://channelpartner.cewealthzen.com'
@@ -74,7 +74,7 @@ app.use(cors({
     'http://localhost:3001',
     'http://localhost:3002',
     'http://localhost:3003',
-    'https://cewealthzen.com',
+    'https://ceinfotech.in',
     'https://sales.cewealthzen.com',
     'https://loans.cewealthzen.com',
     'https://channelpartner.cewealthzen.com'
@@ -97,7 +97,7 @@ backendRouter.use(cors({
     'http://localhost:3001',
     'http://localhost:3002',
     'http://localhost:3003',
-    'https://cewealthzen.com',
+    'https://ceinfotech.in',
     'https://sales.cewealthzen.com',
     'https://loans.cewealthzen.com',
     'https://channelpartner.cewealthzen.com'
@@ -278,8 +278,8 @@ backendRouter.get('/diagnostic', (req, res) => {
       allowedOrigins: [
         'http://localhost:3000',
         'http://localhost:3001',
-        'https://cewealthzen.com',
-        'https://cewealthzen.com'
+        'https://ceinfotech.in',
+        'https://ceinfotech.in'
       ]
     }
   });
@@ -345,8 +345,8 @@ backendRouter.get('/api/deployment-status', (req, res) => {
     nodeVersion: process.version,
     deployment: {
       path: '/backend subdirectory deployment',
-      apiBaseUrl: 'https://cewealthzen.com/backend/api',
-      staticFiles: 'https://cewealthzen.com/backend/uploads'
+      apiBaseUrl: 'https://api.ceinfotech.in/api',
+      staticFiles: 'https://api.ceinfotech.in/uploads'
     }
   });
 });

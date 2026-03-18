@@ -202,7 +202,7 @@ router.post('/send-webmail-test', async (req, res) => {
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
           <h2 style="color: #007AFF;">✅ Webmail Test Successful!</h2>
           <p>This test email was sent from your Real Estate App backend running on:</p>
-          <p><strong>Server:</strong> https://cewealthzen.com/</p>
+          <p><strong>Server:</strong> https://ceinfotech.in/</p>
           <p><strong>Sent at:</strong> ${new Date().toLocaleString()}</p>
           <p><strong>Email Service:</strong> Creative Ethics Webmail with Gmail Fallback</p>
           <div style="background-color: #e8f5e8; border: 1px solid #4caf50; border-radius: 8px; padding: 15px; margin: 20px 0;">

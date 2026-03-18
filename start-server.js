@@ -115,9 +115,9 @@ async function startServer() {
     
     if (process.env.NODE_ENV !== 'development') {
       console.log('\n🌍 Live URLs:');
-      console.log('   Live: https://cewealthzen.com/backend');
-      console.log('   API: https://cewealthzen.com/backend/api');
-      console.log('   Health: https://cewealthzen.com/backend/api/health');
+      console.log('   Live: https://api.ceinfotech.in');
+      console.log('   API: https://api.ceinfotech.in/api');
+      console.log('   Health: https://api.ceinfotech.in/api/health');
     }
     
     console.log('\n📊 Server Status: RUNNING');
