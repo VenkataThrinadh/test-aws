@@ -60,7 +60,7 @@ ensureTable();
 
 
 // --- Department/Designation Feature Toggles ---
-// NOTE: In production, all API routes are prefixed with /backend, e.g. /backend/api/settings/feature-toggles
+// NOTE: In production, all API routes are accessible at root level, e.g. /api/settings/feature-toggles
 // Get feature toggles for a department/designation (public, no auth)
 router.get('/feature-toggles', async (req, res) => {
   try {

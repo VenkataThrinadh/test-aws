@@ -1,11 +1,11 @@
 # API Route Prefix
 
-In production, all backend API routes are prefixed with `/backend`. For example:
+In production, the backend API routes are accessible at the root level. For example:
 
-- `GET /backend/api/settings/feature-toggles?department=Sales&role=admin`
-- `POST /backend/api/auth/login`
+- `GET /api/settings/feature-toggles?department=Sales&role=admin`
+- `POST /api/auth/login`
 
-If you use `/api/...` directly, you will receive the frontend HTML instead of the API response.
+The `/api` paths are directly accessible without any prefix.
 # Real Estate App Backend - Production Ready
 
 This is the production-ready backend for the Real Estate App, configured for shared hosting deployment.
@@ -13,7 +13,7 @@ This is the production-ready backend for the Real Estate App, configured for sha
 ## 🚀 Production Configuration
 
 This backend is pre-configured for deployment to:
- Host: http://cewealthzen.com/backend
+ Host: http://api.ceinfotech.in
  **Database**: cewealthzen_real_estate_db (MySQL)
  **User**: cewealthzen_mobile_application
 
@@ -49,12 +49,12 @@ Test these URLs after deployment:
 
 **API Health Check:**
 ```
-http://cewealthzen.com/backend/api/health
+http://api.ceinfotech.in/api/health
 ```
 
 **Mobile Health Check:**
 ```
-http://cewealthzen.com/backend/mobile-health
+http://api.ceinfotech.in/mobile-health
 ```
 
 ### Main API Endpoints

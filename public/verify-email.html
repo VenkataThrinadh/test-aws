@@ -80,7 +80,7 @@
         </div>
         
         <div id="actions" style="display: none;">
-            <a href="/backend/api/auth/resend-verification" class="link">📧 Resend Verification</a>
+            <a href="/api/auth/resend-verification" class="link">📧 Resend Verification</a>
             <a href="https://ceinfotech.in" class="link">🏠 Go to App</a>
         </div>
     </div>
@@ -96,7 +96,7 @@
         }
         
         // Verify the email
-        fetch('/backend/api/auth/verify-email', {
+        fetch('/api/auth/verify-email', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

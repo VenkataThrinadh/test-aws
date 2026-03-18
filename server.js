@@ -138,9 +138,9 @@ backendRouter.get('/api/health', async (req, res) => {
       timestamp: new Date().toISOString(),
       environment: process.env.NODE_ENV || 'production',
       routes: {
-        auth: '/backend/api/auth/login',
-        notifications: '/backend/api/notifications/unread-count',
-        health: '/backend/api/health'
+        auth: '/api/auth/login',
+        notifications: '/api/notifications/unread-count',
+        health: '/api/health'
       }
     });
   } catch (error) {
@@ -344,7 +344,7 @@ backendRouter.get('/api/deployment-status', (req, res) => {
     environment: process.env.NODE_ENV,
     nodeVersion: process.version,
     deployment: {
-      path: '/backend subdirectory deployment',
+      path: 'API routes accessible at root',
       apiBaseUrl: 'https://api.ceinfotech.in/api',
       staticFiles: 'https://api.ceinfotech.in/uploads'
     }
@@ -356,8 +356,8 @@ backendRouter.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Mount the backend router under /backend path
-app.use('/backend', backendRouter);
+// Mount the backend router at root path
+app.use('/', backendRouter);
 
 // Root page (served from main app, not backend)
 app.get('/', (req, res) => {
@@ -367,8 +367,8 @@ app.get('/', (req, res) => {
 // Catch-all handler for React Router (SPA routing)
 // This should handle all routes that don't match backend routes
 app.get('*', (req, res, next) => {
-  // Skip if this is a backend API route
-  if (req.path.startsWith('/backend')) {
+  // Skip if this is an API route
+  if (req.path.startsWith('/api')) {
     return next();
   }
   
@@ -397,9 +397,7 @@ app.use((req, res) => {
     message: `Route ${req.method} ${req.path} not found`,
     availableRoutes: {
       root: '/',
-      test: '/test',
-      backend: '/backend/*',
-      api: '/backend/api/*'
+      api: '/api/*'
     }
   });
 });
@@ -413,8 +411,8 @@ cron.schedule('0 * * * *', () => {
 server.listen(PORT, () => {
   if (process.env.NODE_ENV === 'development') {
     console.log(`🚀 Real Estate Backend Server running on port ${PORT}`);
-    console.log(`📱 Mobile API: http://localhost:${PORT}/backend/api`);
-    console.log(`🌐 Health Check: http://localhost:${PORT}/backend/api/health`);
+    console.log(`📱 Mobile API: http://localhost:${PORT}/api`);
+    console.log(`🌐 Health Check: http://localhost:${PORT}/api/health`);
     console.log(`🧪 Test Page: http://localhost:${PORT}/test`);
     console.log(`📊 Environment: ${process.env.NODE_ENV}`);
   } else {

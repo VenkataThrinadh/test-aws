@@ -109,9 +109,9 @@ async function startServer() {
     
     console.log('✅ Server started successfully!');
     console.log('\n🔗 Server URLs:');
-    console.log(`   Local: http://localhost:${process.env.PORT || 3000}/backend`);
-    console.log(`   API: http://localhost:${process.env.PORT || 3000}/backend/api`);
-    console.log(`   Health: http://localhost:${process.env.PORT || 3000}/backend/api/health`);
+    console.log(`   Local: http://localhost:${process.env.PORT || 3000}`);
+    console.log(`   API: http://localhost:${process.env.PORT || 3000}/api`);
+    console.log(`   Health: http://localhost:${process.env.PORT || 3000}/api/health`);
     
     if (process.env.NODE_ENV !== 'development') {
       console.log('\n🌍 Live URLs:');
