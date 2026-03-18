@@ -1,0 +1,41 @@
+{
+  "name": "real-estate-app-backend",
+  "version": "1.0.0",
+  "description": "Custom backend for Real Estate App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node start-server.js",
+    "dev": "NODE_ENV=development nodemon start-server.js",
+    "server": "node server.js",
+    "production": "NODE_ENV=production node start-server.js",
+    "postinstall": "echo \"Backend dependencies installed successfully\"",
+    "deploy": "npm install --production && npm run production",
+    "diagnose": "node diagnose.js",
+    "health-check": "node -e \"console.log('Health check passed')\"",
+    "db-test": "node -e \"require('./db').pool.execute('SELECT 1').then(() => console.log('DB OK')).catch(e => console.error('DB Error:', e.message))\"",
+    "migrate:transactions": "node scripts/add_missing_transactions_columns.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "express-rate-limit": "^8.0.1",
+    "joi": "^17.11.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.29.4",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.14.1",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.3",
+    "pdfkit": "^0.13.0",
+    "socket.io": "^4.7.2",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
